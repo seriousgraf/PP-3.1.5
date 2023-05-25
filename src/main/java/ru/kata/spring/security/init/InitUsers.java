@@ -36,19 +36,19 @@ public class InitUsers implements CommandLineRunner {
             roleRepository.save(roleUser);
 
             User user = new User();
-            user.setName("User");
-            user.setSurname("Userov");
-            user.setAge(18);
-            user.setEmail("user@mail.ru");
+            user.setName("Alex");
+            user.setSurname("User");
+            user.setAge(23);
+            user.setEmail("alexuser@mail.ru");
             user.setPassword(passwordEncoder.encode("user"));
             user.setRoles(List.of(roleUser));
             userRepository.save(user);
 
             User admin = new User();
-            admin.setName("Admin");
-            admin.setSurname("Adminov");
-            admin.setAge(99);
-            admin.setEmail("admin@mail.ru");
+            admin.setName("Alex");
+            admin.setSurname("Admin");
+            admin.setAge(23);
+            admin.setEmail("alexadmin@mail.ru");
             admin.setPassword(passwordEncoder.encode("admin"));
             admin.setRoles(List.of(roleAdmin, roleUser));
             userRepository.save(admin);
